@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Condominios_Sol_Nascente", "Condominios_Sol_Nascente\Condominios_Sol_Nascente.csproj", "{B3BB9886-BEBE-447F-8EDB-B3F3849BF7DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{675A07AE-2AF0-492D-ABA3-6C1F60765587}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3BB9886-BEBE-447F-8EDB-B3F3849BF7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BB9886-BEBE-447F-8EDB-B3F3849BF7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BB9886-BEBE-447F-8EDB-B3F3849BF7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BB9886-BEBE-447F-8EDB-B3F3849BF7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675A07AE-2AF0-492D-ABA3-6C1F60765587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675A07AE-2AF0-492D-ABA3-6C1F60765587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675A07AE-2AF0-492D-ABA3-6C1F60765587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675A07AE-2AF0-492D-ABA3-6C1F60765587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26AE86C5-0745-4CCB-B5AE-96B9026498C5}
+	EndGlobalSection
+EndGlobal
