@@ -66,6 +66,8 @@
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\BaseRepository.cs" />
+    <Compile Include="Repositorys\CondominioRepository.cs" />
+    <Compile Include="Repositorys\FuncionarioRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

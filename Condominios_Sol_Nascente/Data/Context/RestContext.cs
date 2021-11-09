@@ -22,8 +22,9 @@ namespace Data.Context
 
         public RestContext() : base("server=192.168.0.104;Database=postgres;User ID=postgres;Password=74269;Persist Security Info=True")
         {
-            
+
 
         }
+
     }
 }
