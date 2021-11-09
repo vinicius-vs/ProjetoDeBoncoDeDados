@@ -10,10 +10,19 @@ namespace Data.Context
 {
     class RestContext : DbContext
     {
-        public DbSet<Condominio> condominio { get; set; }
+        /*
+         *  CREATE TABLE condominios(
+         *  ID INT IDENTITY(1,1) PRIMARY KEY,
+         *  Cnpj VARCHAR(255),
+         *  nome VARCHAR(255),
+         *  endereco VARCHAR(255)
+         *  )
+         */
+        public DbSet<Condominio> condominios{ get; set; }
 
-        public RestContext() : base("Host=192.168.0.104;Database=postgres;Username=postgres;Password=74269;Persist Security Info=True")
+        public RestContext() : base("server=192.168.0.104;Database=postgres;User ID=postgres;Password=74269;Persist Security Info=True")
         {
+            
 
         }
     }
