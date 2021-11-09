@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    class Funcionario
+    public class Funcionario:BaseModel
     {
         public Condominio condominio { get; set; }
         public string cpf { get; set; }
