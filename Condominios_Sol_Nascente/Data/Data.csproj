@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202111071802136_Condominios.designer.cs">
       <DependentUpon>202111071802136_Condominios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111092338574_funcionrios.cs" />
+    <Compile Include="Migrations\202111092338574_funcionrios.designer.cs">
+      <DependentUpon>202111092338574_funcionrios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Condominio.cs" />
@@ -86,6 +90,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111071802136_Condominios.resx">
       <DependentUpon>202111071802136_Condominios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111092338574_funcionrios.resx">
+      <DependentUpon>202111092338574_funcionrios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

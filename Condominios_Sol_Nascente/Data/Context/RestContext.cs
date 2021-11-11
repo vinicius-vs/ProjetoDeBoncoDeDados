@@ -19,9 +19,11 @@ namespace Data.Context
          *  )
          */
         public DbSet<Condominio> condominios{ get; set; }
+        public DbSet<Funcionario> funcionarios { get; set; }
 
-        public RestContext() : base("server=192.168.0.104;Database=postgres;User ID=postgres;Password=74269;Persist Security Info=True")
+        public RestContext() : base("Data Source=192.168.0.104;Initial Catalog=master;Persist Security Info=True;User ID=SA;Password=myPassword")
         {
+
 
 
         }
