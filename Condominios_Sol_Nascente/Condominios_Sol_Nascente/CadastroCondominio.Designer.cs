@@ -45,6 +45,8 @@ namespace Condominios_Sol_Nascente
             this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deletar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alterar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.lbId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,11 +168,31 @@ namespace Condominios_Sol_Nascente
             this.Alterar.Name = "Alterar";
             this.Alterar.Width = 50;
             // 
+            // tbId
+            // 
+            this.tbId.Enabled = false;
+            this.tbId.Location = new System.Drawing.Point(71, 78);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(205, 20);
+            this.tbId.TabIndex = 9;
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Location = new System.Drawing.Point(40, 81);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(21, 13);
+            this.lbId.TabIndex = 10;
+            this.lbId.Text = "ID:";
+            this.lbId.Click += new System.EventHandler(this.lbId_Click);
+            // 
             // CadastroCondominio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbId);
+            this.Controls.Add(this.tbId);
             this.Controls.Add(this.dgCon);
             this.Controls.Add(this.BtCancelarCon);
             this.Controls.Add(this.BtSalvarCon);
@@ -206,5 +228,7 @@ namespace Condominios_Sol_Nascente
         private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deletar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Alterar;
+        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.Label lbId;
     }
 }

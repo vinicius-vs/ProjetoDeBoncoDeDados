@@ -26,6 +26,7 @@ namespace Condominios_Sol_Nascente
 
         private void LinparCampos()
         {
+            tbId.Text = string.Empty;
             TbNomeCon.Text = string.Empty;
             TbCnpjCon.Text = string.Empty;
             TbEndCon.Text = string.Empty;
@@ -42,7 +43,14 @@ namespace Condominios_Sol_Nascente
             con.nome = TbNomeCon.Text;
             con.cnpj = TbCnpjCon.Text;
             con.endereco = TbEndCon.Text;
+            if (tbId.Text.Equals(string.Empty))
+            {
             Condominios.Create(con);
+            } else
+            {
+                con.id = int.Parse( tbId.Text);
+                Condominios.Update(con);
+            }
             LinparCampos();
             CarregarCondominios();
         }
@@ -63,6 +71,16 @@ namespace Condominios_Sol_Nascente
             dgCon.Refresh();
         }
 
+        private void PrencherDados(Condominio model)
+        {
+            tbId.Text =  model.id.ToString();
+            TbNomeCon.Text = model.nome;
+            TbCnpjCon.Text = model.cnpj;
+            TbEndCon.Text = model.endereco;
+        }
+
+
+
         private void dgCon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             List<Condominio> cons = Condominios.Read();
@@ -73,9 +91,18 @@ namespace Condominios_Sol_Nascente
             if(e.ColumnIndex.Equals(4))
             {
                 Condominios.Delete(con.id);
+            }else if (e.ColumnIndex.Equals(5))
+            {
+                PrencherDados(con);
             }
 
             CarregarCondominios();
+        }
+
+
+        private void lbId_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
