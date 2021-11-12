@@ -121,6 +121,10 @@ namespace Condominios_Sol_Nascente
             // 
             // dgCon
             // 
+            this.dgCon.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgCon.AllowUserToAddRows = false;
+            this.dgCon.AllowUserToDeleteRows = false;
+            this.dgCon.AllowUserToResizeRows = false;
             this.dgCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -129,8 +133,13 @@ namespace Condominios_Sol_Nascente
             this.Cnpj,
             this.Deletar,
             this.Alterar});
+            this.dgCon.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgCon.Location = new System.Drawing.Point(320, 12);
             this.dgCon.Name = "dgCon";
+            this.dgCon.ShowCellErrors = false;
+            this.dgCon.ShowCellToolTips = false;
+            this.dgCon.ShowEditingIcon = false;
+            this.dgCon.ShowRowErrors = false;
             this.dgCon.Size = new System.Drawing.Size(468, 426);
             this.dgCon.TabIndex = 8;
             this.dgCon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCon_CellContentClick);
@@ -221,7 +230,6 @@ namespace Condominios_Sol_Nascente
         private System.Windows.Forms.TextBox TbCnpjCon;
         private System.Windows.Forms.Button BtSalvarCon;
         private System.Windows.Forms.Button BtCancelarCon;
-        private System.Windows.Forms.DataGridView dgCon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
@@ -230,5 +238,6 @@ namespace Condominios_Sol_Nascente
         private System.Windows.Forms.DataGridViewTextBoxColumn Alterar;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label lbId;
+        private System.Windows.Forms.DataGridView dgCon;
     }
 }
