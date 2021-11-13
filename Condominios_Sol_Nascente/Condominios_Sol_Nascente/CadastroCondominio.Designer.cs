@@ -124,6 +124,7 @@ namespace Condominios_Sol_Nascente
             this.dgCon.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dgCon.AllowUserToAddRows = false;
             this.dgCon.AllowUserToDeleteRows = false;
+            this.dgCon.AllowUserToResizeColumns = false;
             this.dgCon.AllowUserToResizeRows = false;
             this.dgCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

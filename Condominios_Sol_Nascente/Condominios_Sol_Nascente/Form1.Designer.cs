@@ -29,8 +29,10 @@ namespace Condominios_Sol_Nascente
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BtCon1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
             // BtCon1
@@ -42,6 +44,11 @@ namespace Condominios_Sol_Nascente
             this.BtCon1.Text = "Cadastrar Condominio";
             this.BtCon1.UseVisualStyleBackColor = true;
             this.BtCon1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -60,6 +67,7 @@ namespace Condominios_Sol_Nascente
         #endregion
 
         private System.Windows.Forms.Button BtCon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
