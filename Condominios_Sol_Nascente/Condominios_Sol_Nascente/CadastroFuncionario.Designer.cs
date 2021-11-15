@@ -108,6 +108,7 @@ namespace Condominios_Sol_Nascente
             this.dgFun.ShowRowErrors = false;
             this.dgFun.Size = new System.Drawing.Size(468, 426);
             this.dgFun.TabIndex = 19;
+            this.dgFun.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFun_CellContentClick);
             // 
             // Deletar
             // 

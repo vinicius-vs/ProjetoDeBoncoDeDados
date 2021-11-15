@@ -21,11 +21,22 @@ namespace Condominios_Sol_Nascente
         {
             funcionarioRepository = new FuncionarioRepository();
             InitializeComponent();
+            dgFun.AllowUserToAddRows = false;
+            dgFun.AutoGenerateColumns = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void CarregarTabela()
+        {
+            dgFun.Rows.Clear();
+
+            foreach(Funcionario fun in funcionarioRepository.Read())
+            {
+                //dgFun.Rows.Add("Delete", "Edite",fun.id,fun.)
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -85,6 +96,11 @@ namespace Condominios_Sol_Nascente
         private void BtCancelarFun_Click(object sender, EventArgs e)
         {
             LimparCampo();
+        }
+
+        private void dgFun_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
