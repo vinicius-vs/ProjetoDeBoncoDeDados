@@ -16,7 +16,7 @@ namespace Condominios_Sol_Nascente
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroCondominio());
+            Application.Run(new CadastroFuncionario());
         }
     }
 }

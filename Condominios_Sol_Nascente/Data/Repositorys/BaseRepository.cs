@@ -30,7 +30,14 @@ namespace Data.Repositorys
         {
             using (var context = new RestContext())
             {
-                return context.Set<M>().Find(id);
+                M model = context.Set<M>().Find(id);
+
+                if (model == null)
+                {
+                    throw new Exception();
+                }
+
+                return model ;
             }
         }
         public virtual void Update(M model)

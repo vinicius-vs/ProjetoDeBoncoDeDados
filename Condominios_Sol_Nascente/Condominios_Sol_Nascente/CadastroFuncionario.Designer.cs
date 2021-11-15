@@ -32,13 +32,17 @@ namespace Condominios_Sol_Nascente
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
             this.lbId = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
-            this.dgCon = new System.Windows.Forms.DataGridView();
+            this.dgFun = new System.Windows.Forms.DataGridView();
+            this.Deletar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deletar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alterar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Funcao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Condominio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtCancelarFun = new System.Windows.Forms.Button();
             this.BtSalvarFun = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +58,9 @@ namespace Condominios_Sol_Nascente
             this.label5 = new System.Windows.Forms.Label();
             this.tbSalFun = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCon)).BeginInit();
+            this.tbConFun = new System.Windows.Forms.TextBox();
+            this.lbAvisoFun = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFun)).BeginInit();
             this.SuspendLayout();
             // 
             // lbId
@@ -74,30 +80,46 @@ namespace Condominios_Sol_Nascente
             this.tbId.Size = new System.Drawing.Size(205, 20);
             this.tbId.TabIndex = 20;
             // 
-            // dgCon
+            // dgFun
             // 
-            this.dgCon.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dgCon.AllowUserToAddRows = false;
-            this.dgCon.AllowUserToDeleteRows = false;
-            this.dgCon.AllowUserToResizeColumns = false;
-            this.dgCon.AllowUserToResizeRows = false;
-            this.dgCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgFun.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgFun.AllowUserToAddRows = false;
+            this.dgFun.AllowUserToDeleteRows = false;
+            this.dgFun.AllowUserToResizeColumns = false;
+            this.dgFun.AllowUserToResizeRows = false;
+            this.dgFun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Deletar,
+            this.Editar,
             this.Id,
             this.Nome,
             this.Endereco,
-            this.Cnpj,
-            this.Deletar,
-            this.Alterar});
-            this.dgCon.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgCon.Location = new System.Drawing.Point(320, 12);
-            this.dgCon.Name = "dgCon";
-            this.dgCon.ShowCellErrors = false;
-            this.dgCon.ShowCellToolTips = false;
-            this.dgCon.ShowEditingIcon = false;
-            this.dgCon.ShowRowErrors = false;
-            this.dgCon.Size = new System.Drawing.Size(468, 426);
-            this.dgCon.TabIndex = 19;
+            this.Cpf,
+            this.Turno,
+            this.Funcao,
+            this.Salario,
+            this.Condominio});
+            this.dgFun.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgFun.Location = new System.Drawing.Point(320, 12);
+            this.dgFun.Name = "dgFun";
+            this.dgFun.ShowCellErrors = false;
+            this.dgFun.ShowCellToolTips = false;
+            this.dgFun.ShowEditingIcon = false;
+            this.dgFun.ShowRowErrors = false;
+            this.dgFun.Size = new System.Drawing.Size(468, 426);
+            this.dgFun.TabIndex = 19;
+            // 
+            // Deletar
+            // 
+            this.Deletar.HeaderText = "";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.Width = 50;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "";
+            this.Editar.Name = "Editar";
+            this.Editar.Width = 50;
             // 
             // Id
             // 
@@ -115,22 +137,30 @@ namespace Condominios_Sol_Nascente
             this.Endereco.HeaderText = "Endereço";
             this.Endereco.Name = "Endereco";
             // 
-            // Cnpj
+            // Cpf
             // 
-            this.Cnpj.HeaderText = "Cnpj";
-            this.Cnpj.Name = "Cnpj";
+            this.Cpf.HeaderText = "Cpf";
+            this.Cpf.Name = "Cpf";
             // 
-            // Deletar
+            // Turno
             // 
-            this.Deletar.HeaderText = "";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.Width = 50;
+            this.Turno.HeaderText = "Turno";
+            this.Turno.Name = "Turno";
             // 
-            // Alterar
+            // Funcao
             // 
-            this.Alterar.HeaderText = "";
-            this.Alterar.Name = "Alterar";
-            this.Alterar.Width = 50;
+            this.Funcao.HeaderText = "Função ";
+            this.Funcao.Name = "Funcao";
+            // 
+            // Salario
+            // 
+            this.Salario.HeaderText = "Salário";
+            this.Salario.Name = "Salario";
+            // 
+            // Condominio
+            // 
+            this.Condominio.HeaderText = "Condomínio";
+            this.Condominio.Name = "Condominio";
             // 
             // BtCancelarFun
             // 
@@ -140,6 +170,7 @@ namespace Condominios_Sol_Nascente
             this.BtCancelarFun.TabIndex = 18;
             this.BtCancelarFun.Text = "Cancelar";
             this.BtCancelarFun.UseVisualStyleBackColor = true;
+            this.BtCancelarFun.Click += new System.EventHandler(this.BtCancelarFun_Click);
             // 
             // BtSalvarFun
             // 
@@ -149,6 +180,7 @@ namespace Condominios_Sol_Nascente
             this.BtSalvarFun.TabIndex = 17;
             this.BtSalvarFun.Text = "Salvar";
             this.BtSalvarFun.UseVisualStyleBackColor = true;
+            this.BtSalvarFun.Click += new System.EventHandler(this.BtSalvarFun_Click);
             // 
             // label2
             // 
@@ -236,7 +268,7 @@ namespace Condominios_Sol_Nascente
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 273);
+            this.label5.Location = new System.Drawing.Point(23, 273);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 27;
@@ -252,17 +284,34 @@ namespace Condominios_Sol_Nascente
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 311);
+            this.label6.Location = new System.Drawing.Point(-1, 311);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Salario:";
+            this.label6.Text = "Condomínio:";
+            // 
+            // tbConFun
+            // 
+            this.tbConFun.Location = new System.Drawing.Point(71, 308);
+            this.tbConFun.Name = "tbConFun";
+            this.tbConFun.Size = new System.Drawing.Size(205, 20);
+            this.tbConFun.TabIndex = 29;
+            // 
+            // lbAvisoFun
+            // 
+            this.lbAvisoFun.AutoSize = true;
+            this.lbAvisoFun.Location = new System.Drawing.Point(71, 339);
+            this.lbAvisoFun.Name = "lbAvisoFun";
+            this.lbAvisoFun.Size = new System.Drawing.Size(0, 13);
+            this.lbAvisoFun.TabIndex = 30;
             // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbAvisoFun);
+            this.Controls.Add(this.tbConFun);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbSalFun);
@@ -272,7 +321,7 @@ namespace Condominios_Sol_Nascente
             this.Controls.Add(this.tbTurnoFun);
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbId);
-            this.Controls.Add(this.dgCon);
+            this.Controls.Add(this.dgFun);
             this.Controls.Add(this.BtCancelarFun);
             this.Controls.Add(this.BtSalvarFun);
             this.Controls.Add(this.label2);
@@ -284,7 +333,7 @@ namespace Condominios_Sol_Nascente
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroFuncionario";
             this.Text = "Funcionario";
-            ((System.ComponentModel.ISupportInitialize)(this.dgCon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,13 +343,7 @@ namespace Condominios_Sol_Nascente
 
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.TextBox tbId;
-        private System.Windows.Forms.DataGridView dgCon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Deletar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Alterar;
+        private System.Windows.Forms.DataGridView dgFun;
         private System.Windows.Forms.Button BtCancelarFun;
         private System.Windows.Forms.Button BtSalvarFun;
         private System.Windows.Forms.Label label2;
@@ -316,5 +359,17 @@ namespace Condominios_Sol_Nascente
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbSalFun;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbConFun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deletar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Editar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Turno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Funcao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Condominio;
+        private System.Windows.Forms.Label lbAvisoFun;
     }
 }

@@ -22,5 +22,11 @@ namespace Condominios_Sol_Nascente
             CadastroCondominio cadastroCondominio = new CadastroCondominio();
             cadastroCondominio.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
+            cadastroFuncionario.Show();
+        }
     }
 }
