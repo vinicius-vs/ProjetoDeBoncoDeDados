@@ -23,6 +23,7 @@ namespace Condominios_Sol_Nascente
             InitializeComponent();
             dgFun.AllowUserToAddRows = false;
             dgFun.AutoGenerateColumns = false;
+            CarregarTabela();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Condominios_Sol_Nascente
 
             foreach(Funcionario fun in funcionarioRepository.Read())
             {
-                //dgFun.Rows.Add("Delete", "Edite",fun.id,fun.)
+                dgFun.Rows.Add("Delete", "Edite", fun.id, fun.nome, fun.endereco, fun.cpf, fun.turno, fun.funcao, fun.salario, fun.condominio);
             }
         }
 
@@ -86,6 +87,7 @@ namespace Condominios_Sol_Nascente
                     funcionarioRepository.Update(funcionario);
                     LimparCampo();
                 }
+                CarregarTabela();
             }
             catch (Exception test)
             {
@@ -97,10 +99,34 @@ namespace Condominios_Sol_Nascente
         {
             LimparCampo();
         }
+        private void PrencherDados(Funcionario model)
+        {
+            TbNomeFun.Text = model.nome;
+            //tbConFun.Text = Convert.ToString( model.condominio.id);
+            tbFuncaoFun.Text = model.funcao;
+            tbId.Text = Convert.ToString( model.id);
+            tbSalFun.Text = Convert.ToString( model.salario);
+            tbTurnoFun.Text = model.turno;
+            TbCpfFun.Text = model.cpf;
+            TbEndFun.Text = model.endereco;
+        }
 
         private void dgFun_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            List<Funcionario> funcionarios = funcionarioRepository.Read();
 
+            Funcionario fun = funcionarios[e.RowIndex];
+
+
+            if (e.ColumnIndex.Equals(0))
+            {
+                funcionarioRepository.Delete(fun.id);
+            }
+            else if (e.ColumnIndex.Equals(1))
+            {
+                PrencherDados(fun);
+            }
+            CarregarTabela();
         }
     }
 }
