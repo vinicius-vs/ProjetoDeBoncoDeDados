@@ -334,6 +334,7 @@ namespace Condominios_Sol_Nascente
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroFuncionario";
             this.Text = "Funcionario";
+            this.Load += new System.EventHandler(this.CadastroFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgFun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

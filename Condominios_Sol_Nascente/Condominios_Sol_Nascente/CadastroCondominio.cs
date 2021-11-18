@@ -90,7 +90,15 @@ namespace Condominios_Sol_Nascente
 
             if(e.ColumnIndex.Equals(4))
             {
+                try
+                {
                 Condominios.Delete(con.id);
+                    lbaviCon.Text = string.Empty;
+                }
+                catch
+                {
+                    lbaviCon.Text = "Esse condominio possui uma ligação";
+                }
             }else if (e.ColumnIndex.Equals(5))
             {
                 PrencherDados(con);

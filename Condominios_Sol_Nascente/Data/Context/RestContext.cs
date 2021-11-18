@@ -21,6 +21,8 @@ namespace Data.Context
         public DbSet<Condominio> condominios{ get; set; }
         public DbSet<Funcionario> funcionarios { get; set; }
 
+        //public DbSet<Funcionario> fun { get; set; }
+
         public RestContext() : base("Data Source=192.168.0.104;Initial Catalog=master;Persist Security Info=True;User ID=SA;Password=myPassword")
         {
 

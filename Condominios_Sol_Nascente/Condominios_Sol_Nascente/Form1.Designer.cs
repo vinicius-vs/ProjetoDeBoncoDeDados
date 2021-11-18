@@ -38,9 +38,9 @@ namespace Condominios_Sol_Nascente
             // 
             // BtCon1
             // 
-            this.BtCon1.Location = new System.Drawing.Point(294, 37);
+            this.BtCon1.Location = new System.Drawing.Point(294, 74);
             this.BtCon1.Name = "BtCon1";
-            this.BtCon1.Size = new System.Drawing.Size(150, 49);
+            this.BtCon1.Size = new System.Drawing.Size(187, 82);
             this.BtCon1.TabIndex = 0;
             this.BtCon1.Text = "Cadastrar Condominio";
             this.BtCon1.UseVisualStyleBackColor = true;
@@ -53,9 +53,9 @@ namespace Condominios_Sol_Nascente
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(294, 125);
+            this.button1.Location = new System.Drawing.Point(294, 207);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 49);
+            this.button1.Size = new System.Drawing.Size(187, 82);
             this.button1.TabIndex = 1;
             this.button1.Text = "Cadastrar Funcionario";
             this.button1.UseVisualStyleBackColor = true;

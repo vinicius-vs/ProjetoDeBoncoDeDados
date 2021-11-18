@@ -52,8 +52,15 @@ namespace Data.Repositorys
         {
             using (var context = new RestContext())
             {
-                context.Entry<M>(this.Read(id)).State = System.Data.Entity.EntityState.Deleted;
-                context.SaveChanges();
+                try
+                {
+                    context.Entry<M>(this.Read(id)).State = System.Data.Entity.EntityState.Deleted;
+                    context.SaveChanges();
+
+                }catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                {
+                    throw new Exception();
+                }
             }
         }
     }

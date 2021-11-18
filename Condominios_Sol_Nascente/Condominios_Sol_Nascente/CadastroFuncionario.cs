@@ -34,9 +34,11 @@ namespace Condominios_Sol_Nascente
         {
             dgFun.Rows.Clear();
 
-            foreach(Funcionario fun in funcionarioRepository.Read())
+
+            foreach (Funcionario fun in funcionarioRepository.Read())
             {
-                dgFun.Rows.Add("Delete", "Edite", fun.id, fun.nome, fun.endereco, fun.cpf, fun.turno, fun.funcao, fun.salario, fun.condominio);
+                
+                dgFun.Rows.Add("Delete", "Edite", fun.id, fun.nome, fun.endereco, fun.cpf, fun.turno, fun.funcao, fun.salario, fun.condominioId);
             }
         }
 
@@ -66,11 +68,12 @@ namespace Condominios_Sol_Nascente
         private void BtSalvarFun_Click(object sender, EventArgs e)
         {
             Funcionario funcionario = new Funcionario();
-            CondominioRepository condominio = new CondominioRepository();
+       
             try
             {
+
                 funcionario.nome = TbNomeFun.Text;
-                funcionario.condominio = condominio.Read(int.Parse(tbConFun.Text));
+                funcionario.condominioId = int.Parse(tbConFun.Text);
                 funcionario.cpf = TbCpfFun.Text;
                 funcionario.funcao = tbFuncaoFun.Text;
                 funcionario.endereco = TbEndFun.Text;
@@ -89,9 +92,9 @@ namespace Condominios_Sol_Nascente
                 }
                 CarregarTabela();
             }
-            catch (Exception test)
+            catch (Exception)
             {
-                lbAvisoFun.Text = "Condominio não valido" + test ;
+                lbAvisoFun.Text = "Condominio não valido";
             }
          }
 
@@ -102,7 +105,7 @@ namespace Condominios_Sol_Nascente
         private void PrencherDados(Funcionario model)
         {
             TbNomeFun.Text = model.nome;
-            //tbConFun.Text = Convert.ToString( model.condominio.id);
+            tbConFun.Text = Convert.ToString( model.condominioId);
             tbFuncaoFun.Text = model.funcao;
             tbId.Text = Convert.ToString( model.id);
             tbSalFun.Text = Convert.ToString( model.salario);
@@ -127,6 +130,11 @@ namespace Condominios_Sol_Nascente
                 PrencherDados(fun);
             }
             CarregarTabela();
+        }
+
+        private void CadastroFuncionario_Load(object sender, EventArgs e)
+        {
+            lbAvisoFun.Text = string.Empty;
         }
     }
 }
