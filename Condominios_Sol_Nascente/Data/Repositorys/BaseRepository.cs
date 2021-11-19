@@ -10,7 +10,9 @@ namespace Data.Repositorys
 {
     public abstract class BaseRepository <M> where M: BaseModel
     {
-
+        /*
+         * 
+         */
         public virtual void Create(M model)
         {
             using (var context = new RestContext())
