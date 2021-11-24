@@ -44,6 +44,17 @@ CREATE TABLE telefone
      celular VARCHAR(50)
   );
 
+CREATE TABLE condominos_telefone
+  (
+     id_condominos INT,
+     id_telefone   INT,
+     PRIMARY KEY (id_condominos, id_telefone),
+     CONSTRAINT fk_condominos_telefone_condominos FOREIGN KEY (id_condominos)
+     REFERENCES condominos (id),
+     CONSTRAINT fk_condominos_telefone_telefone FOREIGN KEY (id_telefone)
+     REFERENCES telefone (id)
+  );
+
 CREATE TABLE condominos
   (
      id                 INT PRIMARY KEY auto_increment,
@@ -85,8 +96,6 @@ CREATE TABLE funcionario
      REFERENCES condominios (id)
   );
 
-SELECT *
-FROM   funcionario;
 
 /*ALTER TABLE funcionario ADD COLUMN turno VARCHAR(12);*/
 CREATE TABLE reserva
@@ -132,17 +141,6 @@ CREATE TABLE ocorrencias
   );
 
 /* Entidades Associativas */
-CREATE TABLE condominos_telefone
-  (
-     id_condominos INT,
-     id_telefone   INT,
-     PRIMARY KEY (id_condominos, id_telefone),
-     CONSTRAINT fk_condominos_telefone_condominos FOREIGN KEY (id_condominos)
-     REFERENCES condominos (id),
-     CONSTRAINT fk_condominos_telefone_telefone FOREIGN KEY (id_telefone)
-     REFERENCES telefone (id)
-  );
-
 CREATE TABLE condominios_funcionario
   (
      id_condominios INT,
@@ -515,9 +513,3 @@ FROM   condominios con
        INNER JOIN estado es
                ON es.id = ci.id_estado
 WHERE  es.uf = 'RS';
-
-
-
-
-
-
