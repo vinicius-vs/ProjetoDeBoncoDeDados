@@ -1,4 +1,3 @@
-/* Início Gamificação */
 CREATE DATABASE administradora DEFAULT charset utf8;
 
 USE administradora;
